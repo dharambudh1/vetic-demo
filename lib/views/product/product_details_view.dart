@@ -216,6 +216,13 @@ final class ProductDetailsView extends GetView<ProductDetailsController> {
     return Align(
       alignment: Alignment.centerRight,
       child: IconButton(
+        style: ButtonStyle(
+          iconColor: WidgetStatePropertyAll<Color?>(
+            controller.isFavorite(item.id ?? 0)
+                ? Colors.red
+                : Theme.of(context).textTheme.bodyMedium?.color,
+          ),
+        ),
         isSelected: controller.isFavorite(item.id ?? 0),
         selectedIcon: const Icon(Icons.favorite),
         icon: const Icon(Icons.favorite_border),

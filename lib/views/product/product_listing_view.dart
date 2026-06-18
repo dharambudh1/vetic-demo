@@ -190,6 +190,13 @@ final class ProductListingView extends GetView<ProductListingController> {
   /// Favorite widget to show favorite icon
   Widget favoriteWidget(final BuildContext context, final ProductModel item) {
     return IconButton(
+      style: ButtonStyle(
+        iconColor: WidgetStatePropertyAll<Color?>(
+          controller.isFavorite(item.id ?? 0)
+              ? Colors.red
+              : Theme.of(context).textTheme.bodyMedium?.color,
+        ),
+      ),
       isSelected: controller.isFavorite(item.id ?? 0),
       selectedIcon: const Icon(Icons.favorite),
       icon: const Icon(Icons.favorite_border),
@@ -261,6 +268,9 @@ final class ProductListingView extends GetView<ProductListingController> {
           return IconButton.outlined(
             onPressed: controller.navigateToFavouritesItems,
             icon: Icon(
+              color: controller.isFavouriteActive.value
+                  ? Colors.red
+                  : Theme.of(context).textTheme.bodyMedium?.color,
               controller.isFavouriteActive.value
                   ? Icons.favorite
                   : Icons.favorite_outline,

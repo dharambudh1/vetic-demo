@@ -154,6 +154,13 @@ final class FavoritesItemsView extends GetView<FavoritesItemsController> {
   /// Image widget to show product image
   Widget favoriteWidget(final BuildContext context, final ProductModel item) {
     return IconButton(
+      style: ButtonStyle(
+        iconColor: WidgetStatePropertyAll<Color?>(
+          controller.isFavorite(item.id ?? 0)
+              ? Colors.red
+              : Theme.of(context).textTheme.bodyMedium?.color,
+        ),
+      ),
       isSelected: controller.isFavorite(item.id ?? 0),
       selectedIcon: const Icon(Icons.favorite),
       icon: const Icon(Icons.favorite_border),
