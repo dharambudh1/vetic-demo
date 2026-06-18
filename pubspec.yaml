@@ -1,0 +1,34 @@
+name: vetic_assignment
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+  flutter: 3.44.0
+
+dependencies:
+  animated_read_more_text: 0.0.6
+  auto_size_text: 3.0.0
+  auto_size_text_field: 2.3.0
+  cached_network_image: 3.4.1
+  connectivity_plus: 7.1.1
+  cupertino_icons: 1.0.8
+  flutter:
+    sdk: flutter
+  future_builder_ex: 5.0.0
+  get: 4.7.3
+  get_it: 9.2.1
+  get_storage: 2.1.1
+  keyboard_dismisser: 3.0.0
+  retry: 3.1.2
+
+dev_dependencies:
+  flutter_lints: 6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
