@@ -1,14 +1,14 @@
-# Vetic demo
+# Vetic Demo
+A Flutter shopping app built with the [Fake Store API](https://fakestoreapi.com/products).
 
-Shopping app using the [Fake Store API](https://fakestoreapi.com/products).
-
-## Features
-
-- Product listing with image, price, and rating
-- Search + pull-to-refresh
-- Product detail screen
-- Favorites with local persistence
-- Loading / error / empty states, retry on failure
+[Download APK](https://app.appsonair.com/install/w2qLxB8g)
 
 ## Preview
-![alt text](https://i.postimg.cc/MpYknqyH/imgonline-com-ua-twotoone-Xq-OCok0n-Hd.png "img")
+![App preview](https://i.postimg.cc/MpYknqyH/imgonline-com-ua-twotoone-Xq-OCok0n-Hd.png)
+
+## Features
+- **Product listing** — image, price, and rating at a glance
+- **Search & pull-to-refresh** — find products quickly, refresh on demand
+- **Product detail screen** — full product view with all metadata
+- **Favorites** — save products with local persistence
+- **Robust states** — loading, error, empty, and retry on failure
