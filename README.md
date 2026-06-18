@@ -1,17 +1,14 @@
-# vetic_assignment
+# Vetic Demo
+A Flutter shopping app built with the [Fake Store API](https://fakestoreapi.com/products).
 
-A new Flutter project.
+[Download APK](https://app.appsonair.com/install/w2qLxB8g)
 
-## Getting Started
+## Preview
+![App preview](https://i.postimg.cc/MpYknqyH/imgonline-com-ua-twotoone-Xq-OCok0n-Hd.png)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+- **Product listing** — image, price, and rating at a glance
+- **Search & pull-to-refresh** — find products quickly, refresh on demand
+- **Product detail screen** — full product view with all metadata
+- **Favorites** — save products with local persistence
+- **Robust states** — loading, error, empty, and retry on failure
