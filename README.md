@@ -1,7 +1,7 @@
 # Vetic Demo
 A Flutter shopping app built with the [Fake Store API](https://fakestoreapi.com/products).
 
-[Download APK](https://app.appsonair.com/install/w2qLxB8g)
+[Download APK (New)](https://app.appsonair.com/install/SixsfPwk)
 
 ## Preview
 ![App preview](https://i.postimg.cc/MpYknqyH/imgonline-com-ua-twotoone-Xq-OCok0n-Hd.png)
