@@ -77,7 +77,24 @@ class CustomTextFormFieldState extends State<CustomTextFormField> {
         hintText: widget.hintText,
         prefixIcon: widget.prefixIcon,
         suffixIcon: widget.suffixIcon,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(24)),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Theme.of(context).textTheme.bodyMedium!.color!,
+          ),
+          borderRadius: BorderRadius.circular(24),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Theme.of(context).textTheme.bodyMedium!.color!,
+          ),
+          borderRadius: BorderRadius.circular(24),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Theme.of(context).textTheme.bodyMedium!.color!,
+          ),
+          borderRadius: BorderRadius.circular(24),
+        ),
       ),
     );
   }
@@ -102,7 +119,24 @@ class CustomTextFormFieldState extends State<CustomTextFormField> {
         hintText: widget.hintText,
         prefixIcon: widget.prefixIcon,
         suffixIcon: widget.suffixIcon,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(24)),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Theme.of(context).textTheme.bodyMedium!.color!,
+          ),
+          borderRadius: BorderRadius.circular(24),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Theme.of(context).textTheme.bodyMedium!.color!,
+          ),
+          borderRadius: BorderRadius.circular(24),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Theme.of(context).textTheme.bodyMedium!.color!,
+          ),
+          borderRadius: BorderRadius.circular(24),
+        ),
       ),
     );
   }

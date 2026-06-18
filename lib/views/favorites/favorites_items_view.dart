@@ -58,7 +58,7 @@ final class FavoritesItemsView extends GetView<FavoritesItemsController> {
           final List<ProductModel> items = controller.rxDynamicList.value;
 
           if (items.isEmpty) {
-            return emptyListWidget();
+            return emptyListWidget(context);
           }
 
           return customGridView(context);
@@ -67,7 +67,7 @@ final class FavoritesItemsView extends GetView<FavoritesItemsController> {
     );
   }
 
-  Widget emptyListWidget() {
+  Widget emptyListWidget(BuildContext context) {
     // No other way to add favorites so just show this message
 
     return Center(
@@ -81,6 +81,11 @@ final class FavoritesItemsView extends GetView<FavoritesItemsController> {
             overflow: TextOverflow.ellipsis,
           ),
           OutlinedButton(
+            style: ButtonStyle(
+              foregroundColor: WidgetStatePropertyAll<Color?>(
+                Theme.of(context).textTheme.bodyMedium?.color,
+              ),
+            ),
             onPressed: () async {
               controller.navigateToProductListing();
             },

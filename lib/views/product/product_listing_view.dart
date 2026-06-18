@@ -64,7 +64,7 @@ final class ProductListingView extends GetView<ProductListingController> {
           final List<ProductModel> items = controller.rxDynamicList.value;
 
           if (items.isEmpty) {
-            return emptyListWidget();
+            return emptyListWidget(context);
           }
 
           return customGridView(context);
@@ -73,7 +73,7 @@ final class ProductListingView extends GetView<ProductListingController> {
     );
   }
 
-  Widget emptyListWidget() {
+  Widget emptyListWidget(BuildContext context) {
     final List<ProductModel> items = controller.rxDynamicList.value;
 
     final bool isFilterActive = controller.isFilterActive.value;
@@ -91,6 +91,11 @@ final class ProductListingView extends GetView<ProductListingController> {
               overflow: TextOverflow.ellipsis,
             ),
             OutlinedButton(
+              style: ButtonStyle(
+                foregroundColor: WidgetStatePropertyAll<Color?>(
+                  Theme.of(context).textTheme.bodyMedium?.color,
+                ),
+              ),
               onPressed: () async {
                 controller.future = controller.init();
               },
@@ -109,6 +114,11 @@ final class ProductListingView extends GetView<ProductListingController> {
               overflow: TextOverflow.ellipsis,
             ),
             OutlinedButton(
+              style: ButtonStyle(
+                foregroundColor: WidgetStatePropertyAll<Color?>(
+                  Theme.of(context).textTheme.bodyMedium?.color,
+                ),
+              ),
               onPressed: () async {
                 controller.rxSelectedFilter.value = null;
                 controller.searchController.text = "";
@@ -279,7 +289,7 @@ final class ProductListingView extends GetView<ProductListingController> {
               return ListTile(
                 dense: true,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 8.0),
-                selected: controller.rxSelectedFilter.value == item,
+                // selected: controller.rxSelectedFilter.value == item,
                 leading: controller.rxSelectedFilter.value == item
                     ? const Icon(Icons.done)
                     : null,
