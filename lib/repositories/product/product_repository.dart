@@ -3,12 +3,16 @@
 import "dart:developer";
 
 import "package:vetic_assignment/constants/method_constants.dart";
+import "package:vetic_assignment/di/service_locator.dart";
 import "package:vetic_assignment/models/product/product_model.dart";
 import "package:vetic_assignment/services/api_service.dart";
 import "package:vetic_assignment/utils/api_endpoints.dart";
 
 /// Product repository for handling product related api requests
 final class ProductRepository {
+  /// API service
+  final APIService _apiService = getIt<APIService>();
+
   /// API endpoints
   final APIEndpoints _apiEndpoints = APIEndpoints();
 
@@ -21,7 +25,7 @@ final class ProductRepository {
 
     try {
       /// Process request to server
-      final (bool, dynamic) result = await APIService().process(
+      final (bool, dynamic) result = await _apiService.process(
         url: _apiEndpoints.products(),
         method: _methodConstants.get,
       );
@@ -47,7 +51,7 @@ final class ProductRepository {
 
     try {
       /// Process request to server
-      final (bool, dynamic) result = await APIService().process(
+      final (bool, dynamic) result = await _apiService.process(
         url: _apiEndpoints.productDetails(id),
         method: _methodConstants.get,
       );
